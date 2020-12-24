@@ -1,0 +1,20 @@
+首先先和githup建立连接
+ssh-keygen
+会在用户目录下建立一个.ssh文件夹 把.ssh文件夹下的id_rsa.pub里边的内容粘帖到github上的SSH keys上
+就能建立链接
+ssh -T git@github.com
+验证有没有链接成功
+在github上New repository 
+然后在项目文件夹下执行git init
+然后建立对应关系
+git remote add origin https://github.com/github上的项目地址.git
+如果想断开连其他的项目地址执行git remote rm origin
+在重复链接步骤
+然后在项目里边开辟一个分支main
+git branch -M main
+然后添加所有文件
+git add .
+然后添加备注
+git commit -m "备注"
+然后上传至github
+git push -u origin main
